@@ -1,0 +1,20 @@
+<h1>Profile</h1>
+
+<div *ngIf="profile && profileKeys">
+  <h2>{{profile.name}}</h2>
+
+  <img
+    [src]="profile.avatar_url"
+    [alt]="profile.name"
+    [title]="profile.name"
+    width="200"
+    height="200"
+    style="border-radius: 10px;">
+
+  <ul>
+    <li *ngFor="#key of profileKeys">{{key|uppercase}}: {{profile[key]}}</li>
+  </ul>
+
+</div>
+
+<pre>{{profile|json}}</pre>

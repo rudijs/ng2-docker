@@ -2,7 +2,9 @@ import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
 import {HomeComponent} from './components/home.component';
-import {HeroComponent} from './components/hero.component';
+import {ContactComponent} from './components/contact.component';
+import {LoginComponent} from './components/login.component';
+import {ProfileComponent} from './components/profile.component';
 
 @Component({
   selector: 'my-app',
@@ -20,9 +22,19 @@ import {HeroComponent} from './components/hero.component';
     useAsDefault: true
   },
   {
-    path: '/hero',
-    name: 'Hero',
-    component: HeroComponent
+    path: '/login',
+    name: 'Login',
+    component: LoginComponent
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: ContactComponent
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: ProfileComponent
   }
 ])
 export class AppComponent {

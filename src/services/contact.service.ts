@@ -1,9 +1,9 @@
 import {Injectable} from 'angular2/core';
 
 interface ContactDetails {
-  name: string,
-  email: string,
-  url: string
+  name: string;
+  email: string;
+  url: string;
 }
 
 @Injectable()
@@ -14,7 +14,7 @@ export class ContactService {
       name: 'Rudi Starcevic',
       email: 'ooly.me@gmail.com',
       url: 'https://github.com/rudijs'
-    }
+    };
   }
-  
+
 }

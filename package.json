@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test karma start karma.conf.js",
+    "test:watch": "npm test -- --no-single-run",
+    "lint": "tslint src/**/*.ts",
+    "lint:watch": "chokidar 'src/**/*.ts' -c 'npm run lint'",
     "start": "webpack-dev-server --history-api-fallback --inline --hot",
     "build": "rimraf build && webpack",
     "build:prod": "rimraf dist && NODE_ENV=production webpack"
@@ -20,10 +23,21 @@
     "zone.js": "^0.6.2"
   },
   "devDependencies": {
+    "chokidar-cli": "^1.2.0",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.9.0",
+    "istanbul": "^0.4.2",
+    "istanbul-instrumenter-loader": "^0.2.0",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-webpack": "^1.7.0",
+    "phantomjs-prebuilt": "^2.1.5",
     "rimraf": "^2.5.2",
     "ts-loader": "^0.8.1",
+    "tslint": "^3.6.0",
     "typescript": "^1.8.7",
     "typings": "^0.7.5",
     "webpack": "^1.12.14",

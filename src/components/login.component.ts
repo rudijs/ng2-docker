@@ -15,11 +15,11 @@ export class LoginComponent {
   loginForm: ControlGroup;
   constructor(builder: FormBuilder) {
     this.loginForm = builder.group({
-      login: ["", Validators.required],
+      login: ['', Validators.required],
       passwordRetry: builder.group({
-        password: ["", Validators.required],
-        // passwordConfirmation: ["", Validators.required, asyncValidator]
-        passwordConfirmation: ["", Validators.required]
+        password: ['', Validators.required],
+        // passwordConfirmation: ['', Validators.required, asyncValidator]
+        passwordConfirmation: ['', Validators.required]
       })
     });
   }
